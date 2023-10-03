@@ -13,9 +13,10 @@
 
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     /* 1vh=1% */
-    background-color: white;
+    background-color: rgb(4, 4, 34);
+    background-size: cover;
 }
 
 nav{
@@ -25,10 +26,7 @@ nav{
     margin-left: 100px;
     align-items: center;
     justify-content: space-between;
-    background-color: bisque;
-    border-radius: 40px;
-    margin-top: 20px;
-
+    margin-top: 0px;
 }
 
 nav .logo{
@@ -37,20 +35,22 @@ nav .logo{
     border-radius: 90px;
     margin-left: 15px;
     margin-bottom: 15px;
-    margin-top:15px;
+    margin-top:25px;
 }
 
 nav ul li{
 
     display:inline-block;
-    margin: 10px 20px;
+    margin: 30px 50px;
+    
 }
 
 nav ul li a{
 
     text-decoration: none;
-    color:black;
+    color:white;
     font-weight: bold;
+    font-size: 25px;
 }
 
 /* pseudo class-to get special effect on mouse hover 
@@ -59,7 +59,15 @@ selector:pseudo-class-name{property value}*/
 
 nav ul li a:hover{
 
-    color: white;
+    color:goldenrod;
+    
+}
+
+
+/* home section */
+#home{
+    height: 60vh;
+    
 }
 
 .title{
@@ -71,8 +79,8 @@ nav ul li a:hover{
 
 .title h1{
 
-    font-size: 50px;
-    color: black;
+    font-size: 80px;
+    color: white;
     margin-bottom: 20px;
 
 }
@@ -80,21 +88,22 @@ nav ul li a:hover{
 
 .title span{
 
-    color: darkseagreen;
+    color: goldenrod;
 }
 
 .title p{
 
-    color: #555;
+    color: white;
     line-height: 30px;
+    font-size: 25px;
 
 }
 
 .title a{
-    background-color: darkseagreen;
+    background-color: goldenrod;
     padding: 10px 18px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
     display: inline-block;
     margin: 30px 0;
@@ -103,70 +112,85 @@ nav ul li a:hover{
 
 .images{
 
-    width: 50%;
-    height: 80%;
+    
     position: absolute;
-    right: 25px;
-    bottom: 0;
+    right: 250px;
+    top: 300px;
+    height: 150px;
+    width: 350px;
     
 }
 
 .images img{
 
-    margin-top: 80px;
-    height: 400px;
-    width: 600px;
-    border-radius: 70px;
-    border: solid;
-    border-color: gray;
     
+    
+    width: 100%;
+    border-radius: 30px;
+    border: 2px;
+    opacity: 0.4;
+    
+   
+    
+}
+.images img:hover{
+    transform: scale(1.1);
+    transition: all 3s ease;
 }
 
 #about{
-
-    margin-right:8%;
-    margin-top: 13%;
-    margin-left: 8%;
+    background-color: rgba(88, 100, 131, 0.516);
+    padding: 50px;
+    width: 100%;
+    height: 90vh;
+    
+    
+    
 }
 
 .heading{
 
     text-align: center;
-}
-
-.heading{
-
+    
     font-size: 40px;
+    color: goldenrod;
 }
+
+
 
 .heading span{
 
     font-size: 25px;
-    color: darkseagreen;
+    color: white;
 }
 
 .about-content{
 
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    
+    
 }
 
 .about-img img{
-
-    width: 90%;
-   border-radius:70px;
+    
+    margin-left: 50px;
+    width: 40%;
+   border-radius:60px;
+   
 }
 
 .about_text{
-
-    font-size: 18px;
+     
+    font-size: 25px;
     font-weight: 500;
     text-align: justify;
+    color: white;
+    margin-right: 100px;
 }
 
 .information{
 
     margin:1rem  0 1.4rem;
+    justify-content: space-between;
 }
 
 .information .info_box{
@@ -222,6 +246,8 @@ nav ul li a:hover{
 
     font-size: 25px;
     font-weight: 800;
+    color: white;
+    margin-bottom: 2%;
 
 
 }
@@ -230,6 +256,7 @@ nav ul li a:hover{
 
     font-size: 23px;
     font-weight: 700;
+    color: goldenrod;
 }
 
 .light-bar{
@@ -238,8 +265,8 @@ nav ul li a:hover{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 8px;
-    background-color: black;
+    height: 28px;
+    background-color: goldenrod;
     border-radius: 8px;
 }
 
@@ -249,8 +276,8 @@ nav ul li a:hover{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 8px;
-    background-color: darkseagreen;
+    height: 28px;
+    background-color: white;
     border-radius: 8px;
 }
 
@@ -303,7 +330,7 @@ nav ul li a:hover{
     align-items: center;
     justify-content: center;
     margin: 0 10px;
-    background-color: darkseagreen;
+    background-color: white;
 
 
 }
@@ -313,17 +340,143 @@ nav ul li a:hover{
 .icon i{
 
     font-size: 20px;
-    color: black;
+    color:goldenrod;
 }
 
 .icon i:hover{
 
-    color:white;
+    color:black;
 }
 
 footer{
 
     margin-top: 2rem;
-    font-weight: bolder;
+    color: white;
 }
 
+
+@media(max-width:600px){
+    .container{
+        margin-right: 200px;
+    }
+
+    nav{
+     
+
+        display: flex;
+        width:85%;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    nav .logo{
+    
+        width: 45px;
+        border-radius: 90px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        margin-top:25px;
+    }
+    
+    nav ul li{
+        
+        display:inline-block;
+        margin: 5px 3px;
+        
+    }
+
+    nav ul li a{
+
+        text-decoration: none;
+        color:white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    #home{
+        height: 80vh;
+        
+    }
+    
+    
+    .title h1{
+
+        font-size: 50px;
+        color: white;
+        margin-bottom: 2px;
+        margin-top: -30px;
+    
+    }
+    
+    
+    .title span{
+    
+        color: goldenrod;
+    }
+    
+    .title p{
+    
+        color: white;
+        line-height: 30px;
+        font-size: 25px;
+        margin-right: 50px;
+    
+    }
+
+    .images img{
+
+        margin-top: 100px;
+        margin-left: 300px;
+        width: 70%;
+        border-radius: 30px;
+        border: 2px;
+        opacity: 0.4;
+        
+       }
+
+       #about{
+        background-color: rgba(88, 100, 131, 0.516);
+        padding: 50px;
+        width: 100%;
+        height: 290vh;
+        
+        
+        
+    }
+
+    .skill-img img{
+
+        
+        margin-top: 500px;
+        width: 80%;
+        object-position: center;
+        padding-left: 4rem;
+        border-radius: 0px;
+        margin-left: -130px;
+    }
+
+    .bar-box{
+
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+        margin-right: -170px;
+    }
+
+    .bar{
+        margin-top: -100px;
+    }
+    
+    #about .heading{
+        margin-left: -100px;
+    }
+    
+    
+    
+    
+    
+}
